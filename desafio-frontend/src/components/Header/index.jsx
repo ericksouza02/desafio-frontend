@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 
 import PrimaryInputWSearchIcon from "./primary-input";
-import SearchIcon from "./search-loupe";
+import CartControl from "./cart-control";
 
 const Header = () => {
     
@@ -12,6 +12,12 @@ const Header = styled.header `
     justify-content: space-between;
     padding: 20px 160px;
     
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
 `
 
 const Logo = styled.a`
@@ -31,6 +37,7 @@ return(
 
             <div>
                 <PrimaryInputWSearchIcon/> 
+                <CartControl/>  
             </div>
         </Header>
     )
