@@ -1,16 +1,20 @@
-import { useState } from 'react'
+import React,{useState} from 'react';
 import './App.css'
 import Header from './components/Header'
-
-
-function App() {
+import FilterBar from './components/FilterBar'
+import FilterContextProvider from './contexts/filter-context';
+const App = () =>  {
   const [count, setCount] = useState(0)
 
+  
   return (
     <>
-      <Header/>
+      <FilterContextProvider>
+        <Header/>
+        <FilterBar/>
+      </FilterContextProvider>
     </>
   )
 }
 
-export default App
+export default App;
