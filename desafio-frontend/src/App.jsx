@@ -8,12 +8,12 @@ const App = () =>  {
 
   
   return (
-    <>
+    <div className='main'>
       <FilterContextProvider>
         <Header/>
         <FilterBar/>
       </FilterContextProvider>
-    </>
+    </div>
   )
 }
 
